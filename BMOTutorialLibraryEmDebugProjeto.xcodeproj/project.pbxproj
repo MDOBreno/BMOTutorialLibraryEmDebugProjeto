@@ -16,6 +16,9 @@
 		33032080248994CB00BC9FAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3303207F248994CB00BC9FAD /* main.m */; };
 		3303208A248994CB00BC9FAD /* BMOTutorialLibraryEmDebugProjetoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33032089248994CB00BC9FAD /* BMOTutorialLibraryEmDebugProjetoTests.m */; };
 		33032095248994CB00BC9FAD /* BMOTutorialLibraryEmDebugProjetoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33032094248994CB00BC9FAD /* BMOTutorialLibraryEmDebugProjetoUITests.m */; };
+		330320A8248995E900BC9FAD /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330320A4248995E900BC9FAD /* AboutUsViewController.xib */; };
+		330320A9248995E900BC9FAD /* libBMOTutorialLibraryEmDebugLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 330320A6248995E900BC9FAD /* libBMOTutorialLibraryEmDebugLibrary.a */; };
+		330320AA248995E900BC9FAD /* Recursos.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 330320A7248995E900BC9FAD /* Recursos.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,10 @@
 		33032090248994CB00BC9FAD /* BMOTutorialLibraryEmDebugProjetoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BMOTutorialLibraryEmDebugProjetoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33032094248994CB00BC9FAD /* BMOTutorialLibraryEmDebugProjetoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMOTutorialLibraryEmDebugProjetoUITests.m; sourceTree = "<group>"; };
 		33032096248994CB00BC9FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		330320A4248995E900BC9FAD /* AboutUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
+		330320A5248995E900BC9FAD /* BMOTutorialLibraryEmDebugLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMOTutorialLibraryEmDebugLibrary.h; sourceTree = "<group>"; };
+		330320A6248995E900BC9FAD /* libBMOTutorialLibraryEmDebugLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBMOTutorialLibraryEmDebugLibrary.a; sourceTree = "<group>"; };
+		330320A7248995E900BC9FAD /* Recursos.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Recursos.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				330320A9248995E900BC9FAD /* libBMOTutorialLibraryEmDebugLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +112,9 @@
 		3303206C248994C800BC9FAD /* BMOTutorialLibraryEmDebugProjeto */ = {
 			isa = PBXGroup;
 			children = (
+				330320A2248995E900BC9FAD /* include */,
+				330320A6248995E900BC9FAD /* libBMOTutorialLibraryEmDebugLibrary.a */,
+				330320A7248995E900BC9FAD /* Recursos.bundle */,
 				3303206D248994C800BC9FAD /* AppDelegate.h */,
 				3303206E248994C800BC9FAD /* AppDelegate.m */,
 				33032070248994C800BC9FAD /* SceneDelegate.h */,
@@ -135,6 +146,23 @@
 				33032096248994CB00BC9FAD /* Info.plist */,
 			);
 			path = BMOTutorialLibraryEmDebugProjetoUITests;
+			sourceTree = "<group>";
+		};
+		330320A2248995E900BC9FAD /* include */ = {
+			isa = PBXGroup;
+			children = (
+				330320A3248995E900BC9FAD /* BMOTutorialLibraryEmDebugLibrary */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		330320A3248995E900BC9FAD /* BMOTutorialLibraryEmDebugLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				330320A4248995E900BC9FAD /* AboutUsViewController.xib */,
+				330320A5248995E900BC9FAD /* BMOTutorialLibraryEmDebugLibrary.h */,
+			);
+			path = BMOTutorialLibraryEmDebugLibrary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +268,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				330320A8248995E900BC9FAD /* AboutUsViewController.xib in Resources */,
 				3303207D248994CB00BC9FAD /* LaunchScreen.storyboard in Resources */,
+				330320AA248995E900BC9FAD /* Recursos.bundle in Resources */,
 				3303207A248994CB00BC9FAD /* Assets.xcassets in Resources */,
 				33032078248994C800BC9FAD /* Main.storyboard in Resources */,
 			);
@@ -446,6 +476,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BMOTutorialLibraryEmDebugProjeto",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ProgramasBMO.BMOTutorialLibraryEmDebugProjeto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -462,6 +496,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BMOTutorialLibraryEmDebugProjeto",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ProgramasBMO.BMOTutorialLibraryEmDebugProjeto;
 				PRODUCT_NAME = "$(TARGET_NAME)";

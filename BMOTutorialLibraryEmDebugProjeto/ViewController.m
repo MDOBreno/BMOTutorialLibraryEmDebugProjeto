@@ -7,16 +7,26 @@
 //
 
 #import "ViewController.h"
+#import "BMOTutorialLibraryEmDebugLibrary.h"
 
 @interface ViewController ()
-
+@property BMOTutorialLibraryEmDebugLibrary *autenticador;
 @end
 
 @implementation ViewController
 
+- (IBAction)registrationAction:(id)sender {
+    [_autenticador presentRegistrationInView:self];
+}
+
+- (IBAction)aboutUsAction:(id)sender {
+    [_autenticador presentAboutUsInView:self];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _autenticador = [BMOTutorialLibraryEmDebugLibrary new];
 }
 
 
